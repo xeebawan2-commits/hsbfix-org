@@ -4,16 +4,16 @@
    ========================================================== */
 
 :root{
-  --bg:#f4f5f7;
+  --bg:#e4e7eb;
   --bg-2:#ffffff;
   --surface:#ffffff;
-  --surface-2:#eceef1;
-  --line:#dcdfe4;
-  --line-soft:#e6e8ec;
+  --surface-2:#d9dde2;
+  --line:#c5cad1;
+  --line-soft:#d2d7dd;
   --ink:#0d1117;
   --ink-2:#1c2430;
-  --body:#4a5462;
-  --muted:#6b7683;
+  --body:#2b3440;
+  --muted:#4d5866;
   --brand:#0f9b8e;
   --brand-2:#0c7d72;
   --brand-soft:#e6f4f2;
@@ -42,6 +42,8 @@ a{color:inherit;text-decoration:none}
 h1,h2,h3,h4,summary,th,.stat b,.price .amt{color:var(--ink)}
 
 .wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
+@media(max-width:720px){.wrap{padding:0 18px}}
+@media(max-width:420px){.wrap{padding:0 15px}}
 
 /* ---------- buttons ---------- */
 .btn{
@@ -425,3 +427,25 @@ tr.rowgrp td{background:var(--surface-2);font-weight:780;font-size:11.5px;letter
 .founding .btn-dark{background:var(--brand);color:#fff}
 .founding .btn-dark:hover{background:var(--brand-2)}
 @media(max-width:840px){.founding{grid-template-columns:1fr;padding:26px 22px;gap:22px}}
+
+/* ---------- mobile readability pass (v1.1) ----------
+   On a narrow screen the grid children stretched full-bleed, so headings and
+   paragraphs sat hard against the left edge. Give every direct text block the
+   same gutter the wrapper uses, and stop long words forcing horizontal drift. */
+@media(max-width:720px){
+  h1,h2,h3,p,li{overflow-wrap:break-word;word-break:normal;hyphens:auto}
+  .hero-inner{padding-left:0;padding-right:0}
+  .hero-copy h1{font-size:31px;line-height:1.22;letter-spacing:-.7px}
+  .hero-copy p{font-size:15.5px}
+  .sec-head h2{font-size:25px;line-height:1.28}
+  .sec-head p{font-size:15px}
+  .stat-strip{grid-template-columns:repeat(2,1fr)}
+  .stat b{font-size:23px}
+  .card,.fcard,.mod,.faq-item{padding-left:16px;padding-right:16px}
+  .foot-grid{padding-left:0;padding-right:0}
+}
+@media(max-width:420px){
+  .hero-copy h1{font-size:27px}
+  .sec-head h2{font-size:22px}
+  .stat-strip{grid-template-columns:repeat(2,1fr)}
+}
