@@ -42,8 +42,8 @@ a{color:inherit;text-decoration:none}
 h1,h2,h3,h4,summary,th,.stat b,.price .amt{color:var(--ink)}
 
 .wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
-@media(max-width:720px){.wrap{padding:0 18px}}
-@media(max-width:420px){.wrap{padding:0 15px}}
+@media(max-width:720px){.wrap{padding:0 18px}.hero-inner{padding-left:18px;padding-right:18px}}
+@media(max-width:420px){.wrap{padding:0 15px}.hero-inner{padding-left:15px;padding-right:15px}}
 
 /* ---------- buttons ---------- */
 .btn{
@@ -346,7 +346,7 @@ footer{background:var(--bg-2);border-top:1px solid var(--line);padding:56px 0 26
 
 /* ---------- responsive ---------- */
 @media(max-width:940px){
-  .hero-inner{grid-template-columns:1fr;gap:38px;padding:56px 0 62px}
+  .hero-inner{grid-template-columns:1fr;gap:38px;padding:56px 22px 62px}
   .hero-visual .shot img{height:300px}
   .frow{grid-template-columns:1fr;gap:32px;margin-bottom:66px}
   .frow.flip .ftext{order:0}
@@ -434,7 +434,6 @@ tr.rowgrp td{background:var(--surface-2);font-weight:780;font-size:11.5px;letter
    same gutter the wrapper uses, and stop long words forcing horizontal drift. */
 @media(max-width:720px){
   h1,h2,h3,p,li{overflow-wrap:break-word;word-break:normal;hyphens:auto}
-  .hero-inner{padding-left:0;padding-right:0}
   .hero-copy h1{font-size:31px;line-height:1.22;letter-spacing:-.7px}
   .hero-copy p{font-size:15.5px}
   .sec-head h2{font-size:25px;line-height:1.28}
