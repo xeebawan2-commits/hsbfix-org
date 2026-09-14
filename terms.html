@@ -269,5 +269,27 @@
   </div>
 </footer>
 
+<script>
+/* nav: close the mobile menu on outside tap, Escape, or link choice */
+(function(){
+  var h=document.querySelector('header');
+  if(!h)return;
+  var b=h.querySelector('.burger');
+  if(!b)return;
+  function close(){
+    if(!h.classList.contains('nav-open'))return;
+    h.classList.remove('nav-open');
+    b.setAttribute('aria-expanded','false');
+    b.textContent='\u2630';
+  }
+  document.addEventListener('pointerdown',function(e){
+    if(!h.classList.contains('nav-open'))return;
+    if(h.contains(e.target))return;   /* taps inside the header keep it open */
+    close();
+  },true);
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape')close(); });
+  h.querySelectorAll('nav a').forEach(function(a){ a.addEventListener('click',close); });
+})();
+</script>
 </body>
 </html>

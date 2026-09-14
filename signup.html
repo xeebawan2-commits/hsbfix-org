@@ -139,6 +139,11 @@
                 Which plan interests you? <span style="color:var(--muted);font-weight:500">(you can change this later)</span>
               </label>
               <div class="plan-pick">
+                <label class="pick" id="p-free">
+                  <input type="radio" name="plan" value="Free trial only">
+                  <span class="pi"><b>Just the free trial</b><small>7 days &middot; full Professional features &middot; no card</small></span>
+                  <span class="pp">Rs 0<br><small style="color:var(--muted);font-weight:500">7 days</small></span>
+                </label>
                 <label class="pick" id="p-essential">
                   <input type="radio" name="plan" value="Essential">
                   <span class="pi"><b>Essential</b><small>10 users &middot; 10 GB &middot; core maintenance</small></span>
@@ -317,6 +322,16 @@ document.getElementById('signupForm').addEventListener('submit',function(e){
                 +(f.notes.value.trim()||''),
         source:'website'
       })
+    }).then(function(res){
+      /* Ask the server to send the acknowledgement email.
+         Fire-and-forget: the enquiry is already saved, so an email
+         failure must never change what the visitor sees. */
+      if(!res||!res.ok)return;
+      return fetch('https://dpmmenwziplixrgylapy.supabase.co/functions/v1/signup-notify',{
+        method:'POST',
+        headers:{'Content-Type':'application/json'},
+        body:JSON.stringify({email:email})
+      }).catch(function(){});
     }).catch(function(){});
   }catch(err){}
 
@@ -329,5 +344,27 @@ document.getElementById('signupForm').addEventListener('submit',function(e){
 <style>
 @media(max-width:900px){ .su-grid{grid-template-columns:1fr !important;gap:34px !important} }
 </style>
+<script>
+/* nav: close the mobile menu on outside tap, Escape, or link choice */
+(function(){
+  var h=document.querySelector('header');
+  if(!h)return;
+  var b=h.querySelector('.burger');
+  if(!b)return;
+  function close(){
+    if(!h.classList.contains('nav-open'))return;
+    h.classList.remove('nav-open');
+    b.setAttribute('aria-expanded','false');
+    b.textContent='\u2630';
+  }
+  document.addEventListener('pointerdown',function(e){
+    if(!h.classList.contains('nav-open'))return;
+    if(h.contains(e.target))return;   /* taps inside the header keep it open */
+    close();
+  },true);
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape')close(); });
+  h.querySelectorAll('nav a').forEach(function(a){ a.addEventListener('click',close); });
+})();
+</script>
 </body>
 </html>
