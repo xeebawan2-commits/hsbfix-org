@@ -298,6 +298,28 @@ document.getElementById('signupForm').addEventListener('submit',function(e){
 
   document.getElementById('waLink').href='https://wa.me/923162364074?text='+encodeURIComponent(msg);
 
+  // Also file the enquiry in the Control Center approval queue.
+  // This creates NO account — it is a lead for HSB Fix Services to review.
+  try{
+    fetch('https://dpmmenwziplixrgylapy.supabase.co/rest/v1/signup_requests',{
+      method:'POST',
+      headers:{
+        'apikey':'sb_publishable_TlKlrk7ulAG8G7EptLCllA_Rbgt7YXY',
+        'Content-Type':'application/json',
+        'Prefer':'return=minimal'
+      },
+      body:JSON.stringify({
+        company_name:company, contact_name:name, email:email,
+        phone:f.phone.value, city:'', plant_type:f.industry.value||null,
+        team_size:f.size.value||null, plan_interest:plan,
+        message:(f.role.value?'Role: '+f.role.value+'. ':'')
+                +(f.plants.value?'Plants: '+f.plants.value+'. ':'')
+                +(f.notes.value.trim()||''),
+        source:'website'
+      })
+    }).catch(function(){});
+  }catch(err){}
+
   document.getElementById('formCard').style.display='none';
   document.getElementById('okBox').classList.add('show');
   window.scrollTo({top:0,behavior:'smooth'});
