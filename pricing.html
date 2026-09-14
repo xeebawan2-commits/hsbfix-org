@@ -26,7 +26,7 @@
       <a href="https://app.hsbfix.org" class="btn btn-ghost">Sign in</a>
       <a href="signup.html" class="btn btn-primary">Start free trial</a>
     </div>
-    <button class="burger">☰</button>
+    <button class="burger" aria-label="Menu" aria-expanded="false" onclick="var h=this.closest('header');var open=h.classList.toggle('nav-open');this.setAttribute('aria-expanded',open);this.textContent=open?'\u2715':'\u2630';">☰</button>
   </div>
 </header>
 
@@ -35,7 +35,7 @@
     <span class="eyebrow">Pricing</span>
     <h1>Three plans. Pick the one that fits.</h1>
     <p>Start with the essentials, or take the plan that predicts failures before they happen.
-       30 days free on any plan — no card, no contract.</p>
+       7 days free on any plan — no card, no contract.</p>
   </div>
 </div>
 
@@ -131,7 +131,7 @@
           <span class="sep"></span>
           <span class="grp">Everything in Essential, plus</span>
           <li><span class="tick hi">★</span><span><b>AI Problem Solver</b><br><small class="fnote">Answers built from your own equipment manuals, with the page cited</small></span></li>
-          <li><span class="tick hi">★</span><span><b>Condition monitoring</b><br><small class="fnote">Sound &amp; vibration analysis from a normal phone, with baseline alarms</small></span></li>
+          <li><span class="tick hi">★</span><span><b>Condition monitoring</b><br><small class="fnote">Machine sound recording from a normal phone, compared against a baseline</small></span></li>
           <li><span class="tick hi">★</span><span><b>REST API</b><br><small class="fnote">Let your accounts or ERP software read PlantMaster automatically</small></span></li>
           <span class="sep"></span>
           <li><span class="tick">✓</span><span>Advanced analytics &amp; MTTR trends</span></li>
@@ -172,7 +172,7 @@
     </div>
 
     <div class="price-foot">
-      <b>Every plan includes:</b> unlimited assets and work orders, offline working,
+      <b>Every plan includes:</b> unlimited assets and work orders,
       voice input, free setup and data import, and your data exportable to Excel at any time.
       <br><br>
       Prices exclude GST. Extra users can be added to any plan in blocks of five. Each subscription covers one plant &mdash; if you run more than one site, <a href="https://wa.me/923162364074">talk to us</a> and we will set up each plant for you.
@@ -310,7 +310,7 @@
       </details>
       <details>
         <summary>Does the trial include the AI?</summary>
-        <p>Yes. All 30 days run on full Professional features so you can judge the AI and condition monitoring properly. You choose a plan at the end, not the beginning.</p>
+        <p>Yes. All 7 days run on full Professional features so you can judge the AI and condition monitoring properly. You choose a plan at the end, not the beginning.</p>
       </details>
       <details>
         <summary>What counts as a user?</summary>
@@ -325,7 +325,7 @@
         <p>No. On Professional, asking the AI and running condition analysis are included with no credits to buy and no per-question charge. There is fair-use monitoring to stop genuine abuse, nothing more.</p>
       </details>
       <details>
-        <summary>What happens after the 30 days?</summary>
+        <summary>What happens after the 7 days?</summary>
         <p>We contact you and ask how it went. If you want to continue we issue an invoice. If not, nothing happens — no card was taken and no billing starts. You can export your data either way.</p>
       </details>
       <details>
@@ -342,7 +342,7 @@
 
 <section class="cta-band">
   <div class="wrap">
-    <h2>Try Professional free for 30 days</h2>
+    <h2>Try Professional free for 7 days</h2>
     <p>Full AI and condition monitoring from day one. No card, no contract. If it does not help, walk away with your data.</p>
     <div class="cta-btns">
       <a href="signup.html?plan=professional" class="btn btn-primary btn-lg">Start free trial</a>
@@ -375,6 +375,8 @@
         <a href="signup.html">Start free trial</a>
         <a href="https://wa.me/923162364074">Contact</a>
         <a href="https://app.hsbfix.org">Sign in</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
       </div>
       <div class="foot-col">
         <h4>Contact</h4>

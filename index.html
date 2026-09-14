@@ -26,7 +26,7 @@
       <a href="https://app.hsbfix.org" class="btn btn-ghost">Sign in</a>
       <a href="signup.html" class="btn btn-primary">Start free trial</a>
     </div>
-    <button class="burger" onclick="document.querySelector('.nav-links').scrollIntoView()">☰</button>
+    <button class="burger" aria-label="Menu" aria-expanded="false" onclick="var h=this.closest('header');var open=h.classList.toggle('nav-open');this.setAttribute('aria-expanded',open);this.textContent=open?'✕':'☰';">☰</button>
   </div>
 </header>
 
@@ -42,13 +42,13 @@
         a breakdown at 3am when your senior engineer is asleep.
       </p>
       <div class="hero-cta">
-        <a href="signup.html" class="btn btn-primary btn-lg">Start 30-day free trial</a>
+        <a href="signup.html" class="btn btn-primary btn-lg">Start 7-day free trial</a>
         <a href="https://wa.me/923162364074" class="btn btn-wa btn-lg">Book a demo</a>
       </div>
       <div class="hero-trust">
         <span>✓ No credit card</span>
         <span>✓ Runs on <b>any</b> phone</span>
-        <span>✓ Works offline</span>
+        <span>✓ Works on the plant floor</span>
         <span>✓ Set up in an afternoon</span>
       </div>
     </div>
@@ -75,8 +75,8 @@
   <div class="wrap">
     <div class="sec-head">
       <span class="eyebrow">What makes it different</span>
-      <h2>Most maintenance software records the past. Ours helps you fix the present.</h2>
-      <p>Every CMMS can store a work order. PlantMaster Pro is the only one that has read your equipment manuals and can tell a technician what to check next.</p>
+      <h2>Record the work. Then get help fixing it.</h2>
+      <p>PlantMaster Pro keeps your maintenance records in order, and puts your own equipment manuals in the hands of whoever is standing at the machine.</p>
     </div>
 
     <!-- AI manual -->
@@ -116,20 +116,20 @@
     <div class="frow flip">
       <div class="ftext">
         <span class="ftag">Condition Monitoring</span>
-        <h3>Hear a bearing failing weeks before it seizes</h3>
+        <h3>Hear when a machine stops sounding normal</h3>
         <p>
           Hold a phone to a running machine and record 30 seconds. PlantMaster analyses
-          the sound and vibration signature, compares it against that machine's healthy
-          baseline, and raises an alarm when the pattern shifts.
+          the sound, compares it against that machine's healthy baseline, and flags it
+          when the pattern shifts — an early warning that something is changing.
         </p>
         <ul class="flist">
-          <li><span class="tick">✓</span><span>No sensors to buy — an ordinary phone microphone is enough</span></li>
+          <li><span class="tick">✓</span><span>Records machine sound with the phone you already carry</span></li>
           <li><span class="tick">✓</span><span>Baseline recorded once, every check compared against it</span></li>
           <li><span class="tick">✓</span><span>Alarms raised automatically when the signature drifts</span></li>
           <li><span class="tick">✓</span><span>Turn an unplanned stoppage into a planned Sunday job</span></li>
         </ul>
       </div>
-      <div class="fimg"><img src="img/feature-condition.jpg" alt="Vibration monitoring on an industrial motor"></div>
+      <div class="fimg"><img src="img/feature-condition.jpg" alt="Recording machine sound on an industrial motor"></div>
     </div>
 
     <!-- Daily email -->
@@ -265,7 +265,7 @@
     </div>
     <div class="mods">
       <div class="mod"><div class="ic">🧠</div><h3>AI Problem Solver</h3><p>Troubleshooting answers taken from your own uploaded equipment manuals, with sources cited.</p></div>
-      <div class="mod"><div class="ic">∿</div><h3>Condition Monitoring</h3><p>Sound and vibration recording with baseline comparison and automatic alarms.</p></div>
+      <div class="mod"><div class="ic">∿</div><h3>Condition Monitoring</h3><p>Record machine sound, compare it against a healthy baseline, and get flagged when it changes.</p></div>
       <div class="mod"><div class="ic">📧</div><h3>Daily Email Report</h3><p>Morning summary to management — jobs, downtime, PM due, low stock, pending approvals.</p></div>
       <div class="mod"><div class="ic">🗣</div><h3>Voice Input</h3><p>Speak in Urdu or English. Transcribed and written up as a proper technical record.</p></div>
       <div class="mod"><div class="ic">🧰</div><h3>Work Orders</h3><p>Corrective jobs with priority, downtime, labour, root cause, photos and sign-off.</p></div>
@@ -305,11 +305,11 @@
       </details>
       <details>
         <summary>Do we need to buy computers, tablets or sensors?</summary>
-        <p>No. It runs in the browser on any Android phone your staff already carry. Condition monitoring uses the phone's own microphone, so there is no vibration sensor hardware to purchase or install.</p>
+        <p>No. It runs in the browser on any Android phone your staff already carry. Condition monitoring records machine sound through the phone's microphone and compares it against a baseline you set — it is an early-warning aid, not a replacement for calibrated vibration analysis.</p>
       </details>
       <details>
         <summary>What happens when the internet or power goes?</summary>
-        <p>Work continues. Records are saved on the phone and sync automatically when the connection returns. Nobody stops working and nothing is lost.</p>
+        <p>If the connection drops briefly while you are saving a record, the entry is held on the phone and sent automatically once the signal returns, so the work is not lost. A working internet connection is needed for normal day-to-day use.</p>
       </details>
       <details>
         <summary>How long does setup take?</summary>
@@ -335,7 +335,7 @@
 <section class="cta-band">
   <div class="wrap">
     <h2>See it running on your own machines</h2>
-    <p>Start a 30-day free trial, or send a WhatsApp message and we will walk you through it on a call. No sales pressure, no credit card.</p>
+    <p>Start a 7-day free trial, or send a WhatsApp message and we will walk you through it on a call. No sales pressure, no credit card.</p>
     <div class="cta-btns">
       <a href="signup.html" class="btn btn-primary btn-lg">Start free trial</a>
       <a href="https://wa.me/923162364074" class="btn btn-wa btn-lg">Message us on WhatsApp</a>
@@ -367,6 +367,8 @@
         <a href="signup.html">Start free trial</a>
         <a href="https://wa.me/923162364074">Contact</a>
         <a href="https://app.hsbfix.org">Sign in</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
       </div>
       <div class="foot-col">
         <h4>Contact</h4>
