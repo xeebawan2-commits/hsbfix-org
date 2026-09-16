@@ -313,6 +313,86 @@
       </div>
       <div class="fimg"><img src="img/feature-ai.jpg" alt="Equipment manuals indexed by AI"></div>
     </div>
+
+    <!-- ===== REAL SIDE-BY-SIDE PROOF ===== -->
+    <div class="sec-head" style="margin-top:86px">
+      <span class="eyebrow">Real output &middot; not a mock-up</span>
+      <h2>The same question, asked in two accounts</h2>
+      <p>One account had no equipment manuals loaded. The other had the plant's own compressor documentation indexed. Below is what each one actually returned.</p>
+    </div>
+
+    <div class="proof-strip">
+      <b>Question typed by the technician:</b> &ldquo;Compressor isn't providing the 8 bar pressure even the capacity of compressors is 10&nbsp;bar&rdquo;
+    </div>
+
+    <div class="proof">
+
+      <div class="pcol">
+        <div class="phead plain">
+          <h3>Account with no manuals loaded</h3>
+          <span>General engineering knowledge only</span>
+        </div>
+        <div class="pmeta">
+          <span class="pill">Confidence 0.85</span>
+          <span class="pill zero">0 plant sources</span>
+        </div>
+        <div class="pbody">
+          <div class="plabel">Diagnostic answer</div>
+          <div class="pquote">
+            &ldquo;&hellip;typically indicates a leak, mechanical wear, or control system limitation. Check for air leaks in the discharge piping, valves and fittings. Inspect the air intake filter for clogs. Verify the pressure switch or transducer calibration. Check for worn piston rings or leaking valves <mark>(reciprocating)</mark> or air-end wear <mark>(rotary screw)</mark>.&rdquo;
+          </div>
+          <div class="plabel">Likely causes</div>
+          <ul class="plist">
+            <li>Air leaks in the discharge line or downstream system</li>
+            <li>Clogged air intake filter</li>
+            <li>Faulty pressure switch or transducer calibration</li>
+            <li>Worn piston rings or leaking valves (reciprocating)</li>
+            <li>Clogged oil separator or minimum pressure valve (rotary screw)</li>
+            <li>Slipping drive belts</li>
+          </ul>
+        </div>
+        <div class="psrc">
+          <b>Sources</b>
+          PlantMaster General Compressor Maintenance Guidelines &middot; Standard Industrial Pneumatic Troubleshooting Protocol
+        </div>
+      </div>
+
+      <div class="pcol win">
+        <div class="phead win">
+          <h3>Account with its own manuals loaded</h3>
+          <span>Grounded in the plant's own documentation</span>
+        </div>
+        <div class="pmeta">
+          <span class="pill good">Confidence 0.90</span>
+          <span class="pill good">8 plant sources</span>
+        </div>
+        <div class="pbody">
+          <div class="plabel">Diagnostic answer</div>
+          <div class="pquote">
+            &ldquo;&hellip;is likely due to incorrect controller setpoints, a significant downstream air leak, or a restricted intake filter. <b>First, verify the &lsquo;Unloading Pressure&rsquo; parameter in the controller menu <mark>(MAM 6080)</mark> to ensure it is not set to 8&nbsp;bar.</b> Second, inspect the system for air leaks and check the intake air filter for blockages.&rdquo;
+          </div>
+          <div class="plabel">Safe checks, in order</div>
+          <ul class="plist">
+            <li>Verify <b>&lsquo;Unloading Pressure&rsquo;</b> parameter in the <b>MAM 6080</b> controller menu</li>
+            <li>Perform a leak test on the downstream air distribution system</li>
+            <li>Inspect and clean/replace the air intake filter</li>
+            <li>Check pressure transducer readings against a calibrated gauge</li>
+            <li>Inspect the unloading valve for proper seating</li>
+          </ul>
+        </div>
+        <div class="psrc">
+          <b>Sources</b>
+          Jaguar 55KW instruction manual, <span class="pg">pages 28&ndash;31</span> &middot; Oil-free compressor 75&nbsp;K OF part manual &middot; Maintenance Schedule &mdash; GA compressors and FX Dryer
+        </div>
+      </div>
+
+    </div>
+
+    <div class="verdict">
+      Both answers are competent. Only one of them tells the technician <b>which menu to open on the controller in front of him</b> &mdash; and shows the page it came from, so he can check it himself.
+      The generic answer sends him hunting through five possibilities; the grounded one starts with a setting that is often the whole problem, and no parts are replaced unnecessarily.
+    </div>
+
   </div>
 </section>
 
