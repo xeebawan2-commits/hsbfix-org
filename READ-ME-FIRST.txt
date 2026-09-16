@@ -1,26 +1,22 @@
-UPLOAD ALL 13 FILES IN THIS FOLDER
-to the GitHub repository for hsbfix.org
+UPLOAD ONLY THE 6 HTML FILES IN THIS FOLDER
+to the top level of the hsbfix.org repository.
 
-Put them in the top level, overwriting the 6 existing
-HTML pages. Commit. Wait 2-3 minutes.
+  index.html  pricing.html  signup.html
+  guide.html  privacy.html  terms.html
 
-WHAT CHANGED
-  The 6 HTML pages now carry hidden tags telling WhatsApp,
-  LinkedIn and Facebook what picture and headline to show.
-  The other 7 files are the picture, the browser tab icon,
-  and two small files that help Google.
+WHY THIS IS A SECOND UPLOAD
+  Your first upload worked. The HTML went in correctly and
+  the 5 image files went in too, but they landed inside the
+  img/ folder instead of the top level.
 
-  Nothing visible on the pages changed. Your layout, text
-  and prices are all exactly as they were.
+  Rather than make you move them, I have changed the HTML
+  to look inside img/ where they already are. Same result,
+  less work, nothing to delete.
 
-THEN CHECK IT WORKED
-  Send yourself this on WhatsApp:   https://hsbfix.org/?1
+DO NOT re-upload the images, the favicon, sitemap.xml or
+robots.txt. Those are all already live and correct.
 
-  The ?1 matters. WhatsApp remembers what a link looked
-  like for about a week, so the plain address may still
-  show the old bare version. The ?1 makes it look new.
-
-  You should see a plant photo, your logo, and the
-  headline. If you do, it worked everywhere.
-
-  Full explanation in 06-DOCS/THE-FOUR-GAPS-EXPLAINED.txt
+THEN TEST
+  Send yourself:  https://hsbfix.org/?2
+  The ?2 matters - WhatsApp caches a link for about a week,
+  so the plain address may still show the old bare version.
