@@ -65,10 +65,23 @@
  "offers": [
   {
    "@type": "Offer",
+   "name": "Basic",
+   "price": "7500",
+   "priceCurrency": "PKR",
+   "description": "5 users, 1 plant, 5 GB. Work orders, PM, assets, spares and procurement.",
+   "priceSpecification": {
+    "@type": "UnitPriceSpecification",
+    "price": "7500",
+    "priceCurrency": "PKR",
+    "unitText": "MONTH"
+   }
+  },
+  {
+   "@type": "Offer",
    "name": "Essential",
    "price": "12000",
    "priceCurrency": "PKR",
-   "description": "10 users, 1 plant, 10 GB. Work orders, PM, assets, spares, procurement.",
+   "description": "10 users, 1 plant, 10 GB. Adds the AI Problem Solver, deep search and vision scanner.",
    "priceSpecification": {
     "@type": "UnitPriceSpecification",
     "price": "12000",
@@ -81,10 +94,23 @@
    "name": "Professional",
    "price": "24000",
    "priceCurrency": "PKR",
-   "description": "25 users, 1 plant, 30 GB. Adds AI Problem Solver, condition monitoring and REST API.",
+   "description": "25 users, 1 plant, 30 GB. Adds condition monitoring and the daily management email.",
    "priceSpecification": {
     "@type": "UnitPriceSpecification",
     "price": "24000",
+    "priceCurrency": "PKR",
+    "unitText": "MONTH"
+   }
+  },
+  {
+   "@type": "Offer",
+   "name": "Enterprise",
+   "price": "40000",
+   "priceCurrency": "PKR",
+   "description": "100 users, 2 plants, 100 GB. Adds company branding and custom limits.",
+   "priceSpecification": {
+    "@type": "UnitPriceSpecification",
+    "price": "40000",
     "priceCurrency": "PKR",
     "unitText": "MONTH"
    }
@@ -136,7 +162,7 @@
 <div class="page-hero">
   <div class="wrap">
     <span class="eyebrow">Pricing</span>
-    <h1>Three plans. Pick the one that fits.</h1>
+    <h1>Four plans. Pick the one that fits.</h1>
     <p>Start with the essentials, or take the plan that predicts failures before they happen.
        7 days free on any plan — no card, no contract.</p>
   </div>
@@ -177,108 +203,170 @@
       <span class="save">2 months free</span>
     </div>
 
-    <div class="plans-3">
+    <div class="wrap">
+    <div class="plans-4">
 
-      <!-- ============ ESSENTIAL ============ -->
-      <div class="plan">
-        <h3>Essential</h3>
-        <p class="who">Get maintenance off registers and WhatsApp. Everything you need to run the day.</p>
-        <div class="price">
-          <span class="cur">Rs</span>
-          <span class="amt" data-m="12,000" data-y="120,000">12,000</span>
-          <span class="per" data-m="/month" data-y="/year">/month</span>
-        </div>
-        <p class="price-note" data-m="10 users &middot; Rs 1,200 per user" data-y="<b>Save Rs 24,000</b> &middot; 10 users">10 users &middot; Rs 1,200 per user</p>
-        <a href="signup.html?plan=essential" class="btn btn-ghost btn-block">Start free trial</a>
+      <div class="plan" data-plan="basic">
+        <h3>Basic</h3>
+        <p class="who">A single plant getting off registers and WhatsApp.</p>
+        <div class="price"><span class="cur">Rs</span><span class="amt" data-m="7,500" data-y="90,000">7,500</span><span class="per" data-m="/month" data-y="/year">/month</span></div>
+        <p class="price-note" data-m="5 users &middot; Rs 1,500 per user" data-y="<b>Save Rs 0</b> &middot; 5 users">5 users &middot; Rs 1,500 per user</p>
+        <a href="signup.html?plan=basic" class="btn btn-ghost btn-block">Start free trial</a>
         <ul class="plan-feats">
-          <li><span class="tick">✓</span><span><b>10 users</b> &middot; 1 plant</span></li>
-          <li><span class="tick">✓</span><span><b>10 GB</b> storage</span></li>
-          <li><span class="tick">✓</span><span>Unlimited assets and work orders</span></li>
-          <span class="sep"></span>
-          <span class="grp">Core modules</span>
-          <li><span class="tick">✓</span><span>Work orders &amp; preventive maintenance</span></li>
-          <li><span class="tick">✓</span><span>Asset register &amp; QR scanning</span></li>
-          <li><span class="tick">✓</span><span>Spares, tools &amp; stock control</span></li>
-          <li><span class="tick">✓</span><span>Purchase orders &amp; suppliers</span></li>
-          <li><span class="tick">✓</span><span>Checklists &amp; inspections</span></li>
-          <li><span class="tick">✓</span><span>Roster, attendance &amp; handovers</span></li>
-          <li><span class="tick">✓</span><span>Voice input in Urdu &amp; English</span></li>
-          <li><span class="tick">✓</span><span>Daily email report to management</span></li>
-          <li><span class="tick">✓</span><span>Reports &amp; Excel export</span></li>
-          <span class="sep"></span>
+          <li><span class="tick">✓</span><span><b>5 users</b> &middot; 1 plant</span></li>
+          <li><span class="tick">✓</span><span><b>5 GB</b> storage &middot; up to 2,000 files</span></li>
+          <span class="sep"></span><span class="grp">Maintenance & operations</span>
+          <li><span class="tick">✓</span><span>Work orders & corrective jobs</span></li>
+          <li><span class="tick">✓</span><span>Preventive maintenance schedules</span></li>
+          <li><span class="tick">✓</span><span>Checklists & inspections</span></li>
+          <li><span class="tick">✓</span><span>Spares, tools & stock control</span></li>
+          <li><span class="tick">✓</span><span>Material requests & purchase orders</span></li>
+          <li><span class="tick">✓</span><span>Supplier records</span></li>
+          <li><span class="tick">✓</span><span>Roster, attendance & handovers</span></li>
+          <li><span class="tick">✓</span><span>Work permits</span></li>
+          <li><span class="tick">✓</span><span>Labour & cost tracking</span></li>
+          <li><span class="tick">✓</span><span>Incident log</span></li>
+          <li><span class="tick">✓</span><span>Reports & analytics</span></li>
+          <li><span class="tick">✓</span><span>Advanced analytics & MTTR</span></li>
+          <span class="sep"></span><span class="grp">AI & intelligence</span>
           <li><span class="x">✕</span><span class="off">AI Problem Solver</span></li>
+          <li><span class="x">✕</span><span class="off">AI deep search</span></li>
+          <li><span class="x">✕</span><span class="off">Vision scanner (nameplates & gauges)</span></li>
           <li><span class="x">✕</span><span class="off">Condition monitoring</span></li>
-          <li><span class="x">✕</span><span class="off">REST API</span></li>
+          <li><span class="tick hi">★</span><span>Predictive maintenance</span></li>
           <span class="sep"></span>
-          <li><span class="tick">✓</span><span>Free setup &amp; data import</span></li>
+          <li><span class="x">✕</span><span class="off">Company branding</span></li>
+          <span class="sep"></span><li><span class="tick">✓</span><span>Free setup &amp; data import</span></li>
           <li><span class="tick">✓</span><span>WhatsApp support</span></li>
         </ul>
       </div>
 
-      <!-- ============ PROFESSIONAL ============ -->
-      <div class="plan feat">
-        <span class="plan-tag">Most plants choose this</span>
-        <h3>Professional</h3>
-        <p class="who">Stop reacting to breakdowns. The AI reads your manuals and the phone listens to your machines.</p>
-        <div class="price">
-          <span class="cur">Rs</span>
-          <span class="amt" data-m="24,000" data-y="240,000">24,000</span>
-          <span class="per" data-m="/month" data-y="/year">/month</span>
-        </div>
+      <div class="plan" data-plan="essential">
+        <h3>Essential</h3>
+        <p class="who">Adds the AI that reads your manuals, and file uploads.</p>
+        <div class="price"><span class="cur">Rs</span><span class="amt" data-m="12,000" data-y="120,000">12,000</span><span class="per" data-m="/month" data-y="/year">/month</span></div>
+        <p class="price-note" data-m="10 users &middot; Rs 1,200 per user" data-y="<b>Save Rs 24,000</b> &middot; 10 users">10 users &middot; Rs 1,200 per user</p>
+        <a href="signup.html?plan=essential" class="btn btn-ghost btn-block">Start free trial</a>
+        <ul class="plan-feats">
+          <li><span class="tick">✓</span><span><b>10 users</b> &middot; 1 plant</span></li>
+          <li><span class="tick">✓</span><span><b>10 GB</b> storage &middot; up to 1,500 files</span></li>
+          <span class="sep"></span><span class="grp">Maintenance & operations</span>
+          <li><span class="tick">✓</span><span>Work orders & corrective jobs</span></li>
+          <li><span class="tick">✓</span><span>Preventive maintenance schedules</span></li>
+          <li><span class="tick">✓</span><span>Checklists & inspections</span></li>
+          <li><span class="tick">✓</span><span>Spares, tools & stock control</span></li>
+          <li><span class="tick">✓</span><span>Material requests & purchase orders</span></li>
+          <li><span class="tick">✓</span><span>Supplier records</span></li>
+          <li><span class="tick">✓</span><span>Roster, attendance & handovers</span></li>
+          <li><span class="tick">✓</span><span>Work permits</span></li>
+          <li><span class="tick">✓</span><span>Safety & lock-out/tag-out</span></li>
+          <li><span class="tick">✓</span><span>Labour & cost tracking</span></li>
+          <li><span class="tick">✓</span><span>Incident log</span></li>
+          <li><span class="tick">✓</span><span>Manual & drawing uploads</span></li>
+          <li><span class="tick">✓</span><span>Support desk</span></li>
+          <li><span class="tick">✓</span><span>Reports & analytics</span></li>
+          <li><span class="tick">✓</span><span>Advanced analytics & MTTR</span></li>
+          <span class="sep"></span><span class="grp">AI & intelligence</span>
+          <li><span class="tick hi">★</span><span>AI Problem Solver</span></li>
+          <li><span class="tick hi">★</span><span>AI deep search</span></li>
+          <li><span class="tick hi">★</span><span>Vision scanner (nameplates & gauges)</span></li>
+          <li><span class="x">✕</span><span class="off">Condition monitoring</span></li>
+          <li><span class="tick hi">★</span><span>Predictive maintenance</span></li>
+          <span class="sep"></span>
+          <li><span class="x">✕</span><span class="off">Daily management email</span></li>
+          <li><span class="x">✕</span><span class="off">Company branding</span></li>
+          <span class="sep"></span><li><span class="tick">✓</span><span>Free setup &amp; data import</span></li>
+          <li><span class="tick">✓</span><span>WhatsApp support</span></li>
+        </ul>
+      </div>
+
+      <div class="plan feat" data-plan="professional">
+        <span class="plan-tag">Most plants choose this</span><h3>Professional</h3>
+        <p class="who">Stop reacting to breakdowns. The phone listens to your machines.</p>
+        <div class="price"><span class="cur">Rs</span><span class="amt" data-m="24,000" data-y="240,000">24,000</span><span class="per" data-m="/month" data-y="/year">/month</span></div>
         <p class="price-note" data-m="25 users &middot; Rs 960 per user" data-y="<b>Save Rs 48,000</b> &middot; 25 users">25 users &middot; Rs 960 per user</p>
         <a href="signup.html?plan=professional" class="btn btn-primary btn-block">Start free trial</a>
         <ul class="plan-feats">
           <li><span class="tick">✓</span><span><b>25 users</b> &middot; 1 plant</span></li>
-          <li><span class="tick">✓</span><span><b>30 GB</b> storage</span></li>
-          <li><span class="tick">✓</span><span>Unlimited assets and work orders</span></li>
+          <li><span class="tick">✓</span><span><b>30 GB</b> storage &middot; up to 5,000 files</span></li>
+          <span class="sep"></span><span class="grp">Maintenance & operations</span>
+          <li><span class="tick">✓</span><span>Work orders & corrective jobs</span></li>
+          <li><span class="tick">✓</span><span>Preventive maintenance schedules</span></li>
+          <li><span class="tick">✓</span><span>Checklists & inspections</span></li>
+          <li><span class="tick">✓</span><span>Spares, tools & stock control</span></li>
+          <li><span class="tick">✓</span><span>Material requests & purchase orders</span></li>
+          <li><span class="tick">✓</span><span>Supplier records</span></li>
+          <li><span class="tick">✓</span><span>Roster, attendance & handovers</span></li>
+          <li><span class="tick">✓</span><span>Work permits</span></li>
+          <li><span class="tick">✓</span><span>Safety & lock-out/tag-out</span></li>
+          <li><span class="tick">✓</span><span>Labour & cost tracking</span></li>
+          <li><span class="tick">✓</span><span>Incident log</span></li>
+          <li><span class="tick">✓</span><span>Manual & drawing uploads</span></li>
+          <li><span class="tick">✓</span><span>Support desk</span></li>
+          <li><span class="tick">✓</span><span>Reports & analytics</span></li>
+          <li><span class="tick">✓</span><span>Advanced analytics & MTTR</span></li>
+          <li><span class="tick">✓</span><span>Excel, CSV, Word & PDF export</span></li>
+          <span class="sep"></span><span class="grp">AI & intelligence</span>
+          <li><span class="tick hi">★</span><span>AI Problem Solver</span></li>
+          <li><span class="tick hi">★</span><span>AI deep search</span></li>
+          <li><span class="tick hi">★</span><span>Vision scanner (nameplates & gauges)</span></li>
+          <li><span class="tick hi">★</span><span>Condition monitoring</span></li>
+          <li><span class="tick hi">★</span><span>Predictive maintenance</span></li>
           <span class="sep"></span>
-          <span class="grp">Everything in Essential, plus</span>
-          <li><span class="tick hi">★</span><span><b>AI Problem Solver</b><br><small class="fnote">Answers built from your own equipment manuals, with the page cited</small></span></li>
-          <li><span class="tick hi">★</span><span><b>Condition monitoring</b><br><small class="fnote">Machine sound recording from a normal phone, compared against a baseline</small></span></li>
-          <li><span class="tick hi">★</span><span><b>REST API</b><br><small class="fnote">Let your accounts or ERP software read PlantMaster automatically</small></span></li>
-          <span class="sep"></span>
-          <li><span class="tick">✓</span><span>Advanced analytics &amp; MTTR trends</span></li>
-          <li><span class="tick">✓</span><span>Scheduled exports</span></li>
-          <li><span class="tick">✓</span><span>Unlimited manual uploads for the AI</span></li>
-          <span class="sep"></span>
-          <li><span class="tick">✓</span><span><b>Priority WhatsApp support</b></span></li>
-          <li><span class="tick">✓</span><span>Free setup, import &amp; team training</span></li>
+          <li><span class="tick">✓</span><span>Daily management email</span></li>
+          <li><span class="x">✕</span><span class="off">Company branding</span></li>
+          <span class="sep"></span><li><span class="tick">✓</span><span>Free setup &amp; data import</span></li>
+          <li><span class="tick">✓</span><span>Priority WhatsApp support</span></li>
         </ul>
       </div>
 
-      <!-- ============ ENTERPRISE ============ -->
-      <div class="plan">
+      <div class="plan" data-plan="enterprise">
         <h3>Enterprise</h3>
-        <p class="who">Large operations that want us to set everything up, train every shift and stay close.</p>
-        <div class="price">
-          <span class="amt" style="font-size:34px">Quoted</span>
-        </div>
-        <p class="price-note">Priced on plants, users and storage</p>
-        <a href="https://wa.me/923162364074" class="btn btn-dark btn-block">Request a quote</a>
+        <p class="who">Two plants, a large team, and your own branding on the app.</p>
+        <div class="price"><span class="cur">Rs</span><span class="amt" data-m="40,000" data-y="400,000">40,000</span><span class="per" data-m="/month" data-y="/year">/month</span></div>
+        <p class="price-note" data-m="100 users &middot; Rs 400 per user" data-y="<b>Save Rs 80,000</b> &middot; 100 users">100 users &middot; Rs 400 per user</p>
+        <a href="signup.html?plan=enterprise" class="btn btn-ghost btn-block">Start free trial</a>
         <ul class="plan-feats">
-          <li><span class="tick">✓</span><span><b>Unlimited users</b></span></li>
-          <li><span class="tick">✓</span><span>Storage to suit your operation</span></li>
+          <li><span class="tick">✓</span><span><b>100 users</b> &middot; 2 plants</span></li>
+          <li><span class="tick">✓</span><span><b>100 GB</b> storage &middot; up to 5,000 files</span></li>
+          <span class="sep"></span><span class="grp">Maintenance & operations</span>
+          <li><span class="tick">✓</span><span>Work orders & corrective jobs</span></li>
+          <li><span class="tick">✓</span><span>Preventive maintenance schedules</span></li>
+          <li><span class="tick">✓</span><span>Checklists & inspections</span></li>
+          <li><span class="tick">✓</span><span>Spares, tools & stock control</span></li>
+          <li><span class="tick">✓</span><span>Material requests & purchase orders</span></li>
+          <li><span class="tick">✓</span><span>Supplier records</span></li>
+          <li><span class="tick">✓</span><span>Roster, attendance & handovers</span></li>
+          <li><span class="tick">✓</span><span>Work permits</span></li>
+          <li><span class="tick">✓</span><span>Safety & lock-out/tag-out</span></li>
+          <li><span class="tick">✓</span><span>Labour & cost tracking</span></li>
+          <li><span class="tick">✓</span><span>Incident log</span></li>
+          <li><span class="tick">✓</span><span>Manual & drawing uploads</span></li>
+          <li><span class="tick">✓</span><span>Support desk</span></li>
+          <li><span class="tick">✓</span><span>Reports & analytics</span></li>
+          <li><span class="tick">✓</span><span>Advanced analytics & MTTR</span></li>
+          <li><span class="tick">✓</span><span>Excel, CSV, Word & PDF export</span></li>
+          <span class="sep"></span><span class="grp">AI & intelligence</span>
+          <li><span class="tick hi">★</span><span>AI Problem Solver</span></li>
+          <li><span class="tick hi">★</span><span>AI deep search</span></li>
+          <li><span class="tick hi">★</span><span>Vision scanner (nameplates & gauges)</span></li>
+          <li><span class="tick hi">★</span><span>Condition monitoring</span></li>
+          <li><span class="tick hi">★</span><span>Predictive maintenance</span></li>
           <span class="sep"></span>
-          <span class="grp">Everything in Professional, plus</span>
-          <li><span class="tick hi">★</span><span><b>Dedicated onboarding</b><br><small class="fnote">We set up every site, import all your data and train each team</small></span></li>
-          <li><span class="tick hi">★</span><span><b>On-site training</b><br><small class="fnote">We come to your plant rather than doing it over a call</small></span></li>
-          <li><span class="tick hi">★</span><span><b>Full audit trail</b><br><small class="fnote">Every change, who made it and when &mdash; downloadable as CSV, Excel, Word or PDF</small></span></li>
-          <li><span class="tick">✓</span><span><b>Data retention control</b><br><small class="fnote">You decide how long records are kept</small></span></li>
-          <li><span class="tick">✓</span><span>Custom reports built for you</span></li>
-          <li><span class="tick">✓</span><span>Priority feature requests</span></li>
-          <span class="sep"></span>
-          <li><span class="tick">✓</span><span><b>Named account manager</b></span></li>
-          <li><span class="tick">✓</span><span>Service level agreement</span></li>
-          <li><span class="tick">✓</span><span>Annual invoicing to suit your finance team</span></li>
+          <li><span class="tick">✓</span><span>Daily management email</span></li>
+          <li><span class="tick">✓</span><span>Company branding</span></li>
+          <li><span class="tick">✓</span><span>Custom limits</span></li>
+          <span class="sep"></span><li><span class="tick">✓</span><span>Free setup &amp; data import</span></li>
+          <li><span class="tick">✓</span><span>Priority WhatsApp support</span></li>
         </ul>
       </div>
+
+    </div>
     </div>
 
     <div class="price-foot">
-      <b>Every plan includes:</b> unlimited assets and work orders,
-      voice input, free setup and data import, and your data exportable to Excel at any time.
-      <br><br>
-      Prices exclude GST. Extra users can be added to any plan in blocks of five. Each subscription covers one plant &mdash; if you run more than one site, <a href="https://wa.me/923162364074">talk to us</a> and we will set up each plant for you.
+      <b>Every plan includes:</b> free setup and data import, voice input in Urdu and English, and your data exportable at any time. <br><br>
+      Prices exclude GST. Need more users, storage or a second plant? We can raise any limit on your account. Each subscription covers one plant &mdash; if you run more than one site, <a href="https://wa.me/923162364074">talk to us</a> and we will set up each plant for you.
       Payment by bank transfer, cheque or card.
     </div>
   </div>
@@ -337,37 +425,39 @@
       <span class="eyebrow">Side by side</span>
       <h2>Compare the plans</h2>
     </div>
-    <div class="cmp-wrap">
-      <table>
-        <thead>
-          <tr><th>&nbsp;</th><th>Essential</th><th class="cmp-us">Professional</th><th>Enterprise</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>Monthly price</td><td>Rs 12,000</td><td class="y">Rs 24,000</td><td class="y">Quoted</td></tr>
-          <tr><td>Users included</td><td>10</td><td class="y">25</td><td class="y">Unlimited</td></tr>
-          <tr><td>Plants</td><td>1</td><td>1</td><td>1</td></tr>
-          <tr><td>Storage</td><td>10 GB</td><td class="y">30 GB</td><td class="y">Custom</td></tr>
-          <tr><td>Assets &amp; work orders</td><td class="y">Unlimited</td><td class="y">Unlimited</td><td class="y">Unlimited</td></tr>
-          <tr class="rowgrp"><td colspan="4">Everyday maintenance</td></tr>
-          <tr><td>Work orders &amp; PM schedules</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td></tr>
-          <tr><td>Asset register &amp; QR scanning</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td></tr>
-          <tr><td>Spares, tools &amp; procurement</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td></tr>
-          <tr><td>Checklists &amp; roster</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td></tr>
-          <tr><td>Voice input (Urdu &amp; English)</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td></tr>
-          <tr><td>Daily email report</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td></tr>
-          <tr class="rowgrp"><td colspan="4">Prediction &amp; intelligence</td></tr>
-          <tr><td><b>AI Problem Solver</b></td><td class="n">✕</td><td class="y">✓</td><td class="y">✓</td></tr>
-          <tr><td><b>Condition monitoring</b></td><td class="n">✕</td><td class="y">✓</td><td class="y">✓</td></tr>
-          <tr><td>Advanced analytics &amp; MTTR</td><td class="n">✕</td><td class="y">✓</td><td class="y">✓</td></tr>
-          <tr class="rowgrp"><td colspan="4">Integration</td></tr>
-          <tr><td>REST API</td><td class="n">✕</td><td class="y">✓</td><td class="y">✓</td></tr>
-          <tr class="rowgrp"><td colspan="4">Support</td></tr>
-          <tr><td>Setup &amp; data import</td><td class="y">Free</td><td class="y">Free</td><td class="y">Free</td></tr>
-          <tr><td>Support</td><td>WhatsApp</td><td class="y">Priority</td><td class="y">Account manager</td></tr>
-          <tr><td>On-site training</td><td class="n">✕</td><td class="n">✕</td><td class="y">✓</td></tr>
-        </tbody>
-      </table>
-    </div>
+    <div class="cmp-wrap"><table class="cmp">
+<thead><tr><th>&nbsp;</th><th>Basic</th><th>Essential</th><th class="cmp-us">Professional</th><th>Enterprise</th></tr></thead><tbody>
+<tr><td>Monthly price</td><td class="y">Rs 7,500</td><td class="y">Rs 12,000</td><td class="y">Rs 24,000</td><td class="y">Rs 40,000</td></tr>
+<tr><td>Users included</td><td class="y">5</td><td class="y">10</td><td class="y">25</td><td class="y">100</td></tr>
+<tr><td>Plants</td><td class="y">1</td><td class="y">1</td><td class="y">1</td><td class="y">2</td></tr>
+<tr><td>Storage</td><td class="y">5 GB</td><td class="y">10 GB</td><td class="y">30 GB</td><td class="y">100 GB</td></tr>
+<tr><td>Files</td><td class="y">2,000</td><td class="y">1,500</td><td class="y">5,000</td><td class="y">5,000</td></tr>
+<tr class="cmp-grp"><td colspan="5">Everyday maintenance</td></tr>
+<tr><td>Work orders &amp; PM schedules</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td></tr>
+<tr><td>Asset register &amp; QR scanning</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td></tr>
+<tr><td>Spares, tools &amp; procurement</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td></tr>
+<tr><td>Checklists &amp; roster</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td></tr>
+<tr><td>Voice input (Urdu &amp; English)</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td></tr>
+<tr><td>Safety &amp; lock-out/tag-out</td><td>✕</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td></tr>
+<tr><td>Manual &amp; drawing uploads</td><td>✕</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td></tr>
+<tr><td>Support desk</td><td>✕</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td></tr>
+<tr class="cmp-grp"><td colspan="5">AI &amp; intelligence</td></tr>
+<tr><td>AI Problem Solver</td><td>✕</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td></tr>
+<tr><td>AI deep search</td><td>✕</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td></tr>
+<tr><td>Vision scanner</td><td>✕</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td></tr>
+<tr><td>Condition monitoring</td><td>✕</td><td>✕</td><td class="y">✓</td><td class="y">✓</td></tr>
+<tr><td>Predictive maintenance</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td></tr>
+<tr class="cmp-grp"><td colspan="5">Reporting &amp; extras</td></tr>
+<tr><td>Reports &amp; analytics</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td></tr>
+<tr><td>Excel, CSV, Word &amp; PDF export</td><td>✕</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td></tr>
+<tr><td>Daily management email</td><td>✕</td><td>✕</td><td class="y">✓</td><td class="y">✓</td></tr>
+<tr><td>Company branding</td><td>✕</td><td>✕</td><td>✕</td><td class="y">✓</td></tr>
+<tr><td>Custom limits</td><td>✕</td><td>✕</td><td>✕</td><td class="y">✓</td></tr>
+<tr class="cmp-grp"><td colspan="5">Support</td></tr>
+<tr><td>Setup &amp; data import</td><td class="y">Free</td><td class="y">Free</td><td class="y">Free</td><td class="y">Free</td></tr>
+<tr><td>Support</td><td class="y">WhatsApp</td><td class="y">WhatsApp</td><td class="y">Priority</td><td class="y">Priority</td></tr>
+<tr><td>On-site training</td><td>✕</td><td>✕</td><td>✕</td><td class="y">✓</td></tr>
+</tbody></table></div>
   </div>
 </section>
 
@@ -388,7 +478,7 @@
         <div class="stor-row"><span>Typical single plant, first year</span><b>2 – 4 GB</b></div>
       </div>
       <p style="margin-top:16px;font-size:13.5px;color:var(--muted)">
-        Professional includes 30 GB because condition monitoring generates audio recordings and
+        Professional includes 30 GB, and Enterprise 100 GB, because condition monitoring generates audio recordings and
         the AI needs your full manual library indexed. If you approach the limit we tell you
         early and quote for more — we never cut you off mid-month.
       </p>
@@ -405,7 +495,7 @@
     <div class="faq">
       <details open>
         <summary>Which plan should we start on?</summary>
-        <p>If you are coming off paper registers, Essential proves the system works with your team. If you already keep decent records and your problem is unplanned breakdowns, go straight to Professional — the condition monitoring and AI are the parts that change outcomes rather than just documenting them.</p>
+        <p>Basic if you are a small single plant coming off paper and mainly need work orders, PM and spares. Essential if you want the AI reading your equipment manuals. Professional if unplanned breakdowns are the problem — that is where condition monitoring lives. Enterprise for a larger team, a second plant, or your own branding on the app.</p>
       </details>
       <details>
         <summary>Can we upgrade later?</summary>
@@ -421,7 +511,7 @@
       </details>
       <details>
         <summary>We have 18 staff. What do we pay?</summary>
-        <p>Professional covers you to 25 users at Rs 24,000. If you only want Essential, extra users are added in blocks of five. Send us a message and we will give you a straight number for your actual headcount.</p>
+        <p>Professional covers you to 25 users at Rs 24,000, so you are inside it. Essential stops at 10 and Basic at 5. If your headcount sits awkwardly between two plans, message us and we will raise the user limit on your account rather than push you up a tier.</p>
       </details>
       <details>
         <summary>Does the AI cost extra per question?</summary>
@@ -437,7 +527,7 @@
       </details>
       <details>
         <summary>What about a small workshop with three people?</summary>
-        <p>Send us a WhatsApp message. If you are genuinely small we will find a price that works, because we would rather have you using it than not.</p>
+        <p>Basic is built for you — Rs 7,500 a month for 5 users and one plant. If that is still too much, send us a WhatsApp message and we will find a number that works.</p>
       </details>
     </div>
   </div>
@@ -530,6 +620,63 @@ function togglePrice(){
   },true);
   document.addEventListener('keydown',function(e){ if(e.key==='Escape')close(); });
   h.querySelectorAll('nav a').forEach(function(a){ a.addEventListener('click',close); });
+})();
+</script>
+
+<!-- live pricing: reads the packages straight from the control centre -->
+<script>
+(function(){
+  var URL="https://dpmmenwziplixrgylapy.supabase.co";
+  var KEY="sb_publishable_TlKlrk7ulAG8G7EptLCllA_Rbgt7YXY";
+  var n=function(v){return Number(v||0).toLocaleString("en-US")};
+
+  fetch(URL+"/rest/v1/rpc/public_pricing_plans",{
+    method:"POST",
+    headers:{"apikey":KEY,"Content-Type":"application/json"},
+    body:"{}"
+  })
+  .then(function(r){ return r.ok ? r.json() : null })
+  .then(function(plans){
+    if(!plans||!plans.length) return;           // keep the written prices
+    plans.forEach(function(p){
+      var card=document.querySelector('.plan[data-plan="'+p.code+'"]');
+      if(!card) return;
+
+      var m=Number(p.price_monthly||0);
+      var y=Number(p.price_yearly|| m*10);
+      if(m>0){
+        var amt=card.querySelector(".amt");
+        if(amt){
+          amt.dataset.m=n(m); amt.dataset.y=n(y);
+          var yearlyOn=document.getElementById("lblY");
+          amt.textContent=(yearlyOn&&yearlyOn.classList.contains("act"))?n(y):n(m);
+        }
+        var note=card.querySelector(".price-note");
+        if(note&&p.max_workers>0){
+          var per=Math.round(m/p.max_workers);
+          note.dataset.m=p.max_workers+" users &middot; Rs "+n(per)+" per user";
+          note.dataset.y="<b>Save Rs "+n(m*12-y)+"</b> &middot; "+p.max_workers+" users";
+          note.innerHTML=note.dataset.m;
+        }
+      }
+      // users / plants / storage line
+      var li=card.querySelectorAll(".plan-feats li");
+      if(li[0]&&p.max_workers) li[0].querySelector("span:last-child").innerHTML=
+        "<b>"+p.max_workers+" users</b> &middot; "+(p.max_plants||1)+" plant"+((p.max_plants||1)>1?"s":"");
+      if(li[1]&&p.storage_gb)  li[1].querySelector("span:last-child").innerHTML=
+        "<b>"+p.storage_gb+" GB</b> storage";
+    });
+    // keep the comparison table in step
+    plans.forEach(function(p){
+      document.querySelectorAll('[data-cell="'+p.code+'-price"]').forEach(function(c){
+        c.textContent="Rs "+n(p.price_monthly)});
+      document.querySelectorAll('[data-cell="'+p.code+'-users"]').forEach(function(c){
+        c.textContent=p.max_workers});
+      document.querySelectorAll('[data-cell="'+p.code+'-storage"]').forEach(function(c){
+        c.textContent=p.storage_gb+" GB"});
+    });
+  })
+  .catch(function(){ /* offline or function not installed - written prices stand */ });
 })();
 </script>
 </body>

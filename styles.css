@@ -366,6 +366,13 @@ footer{background:var(--bg-2);border-top:1px solid var(--line);padding:56px 0 26
 
 /* ---------- 3-plan grid ---------- */
 .plans-3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;align-items:start}
+.plans-4{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;align-items:start}
+.plans-4 .plan{padding:26px 20px}
+.plans-4 .plan h3{font-size:19px}
+.plans-4 .plan-feats li{font-size:13px}
+.cmp-grp td{background:var(--surface-2);font-weight:700;font-size:13px}
+@media(max-width:1100px){.plans-4{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:640px){.plans-4{grid-template-columns:1fr;max-width:440px;margin:0 auto}}
 .plan-feats li.off{color:#9aa4b0}
 .plan-feats .x{color:#c3cad2;flex:none;font-size:12px;margin-top:3px}
 .plan-feats .tick.hi{color:var(--accent);font-size:13px}
