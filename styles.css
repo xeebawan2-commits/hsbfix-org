@@ -14,10 +14,10 @@
   --ink-2:#1c2430;
   --body:#2b3440;
   --muted:#4d5866;
-  --brand:#0f9b8e;
-  --brand-2:#0c7d72;
-  --brand-soft:#e6f4f2;
-  --accent:#c2410c;
+  --brand:#2563eb;
+  --brand-2:#1d4ed8;
+  --brand-soft:#e8effd;
+  --accent:#d97706;
   --ok:#15803d;
   --danger:#b91c1c;
   --radius:12px;
@@ -589,7 +589,7 @@ tr.rowgrp td{background:var(--surface-2);font-weight:780;font-size:11.5px;letter
 }
 .g-tip{border-left:3px solid var(--brand)}
 .g-note{border-left:3px solid #5b6673}
-.g-warn{border-left:3px solid #c2410c;background:#fdf3ee;border-color:#f0d3c2}
+.g-warn{border-left:3px solid #d97706;background:#fdf3ee;border-color:#f0d3c2}
 .g-warn b{color:#9a3412}
 .g-tip p,.g-note p,.g-warn p{margin:0;font-size:14.9px}
 /* contents box */
