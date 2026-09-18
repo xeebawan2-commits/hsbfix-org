@@ -30,6 +30,14 @@
 <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
 <!-- /social preview -->
 <link rel="stylesheet" href="styles.css">
+<style>
+/* The global rule ".legal a" paints every link brand-blue and underlines it.
+   On a blue button that makes the label invisible. Re-assert button colours. */
+.legal .res-cta a,.legal a.btn{text-decoration:none}
+.legal .res-cta a.btn-primary,.legal a.btn.btn-primary{color:#fff}
+.legal .res-cta a.btn-wa,.legal a.btn.btn-wa{color:#06240f}
+.legal a.btn{display:inline-flex;align-items:center;justify-content:center}
+</style>
 </head>
 <body>
 
@@ -80,12 +88,12 @@
     <!-- Portrait phone recording: keep it phone-width so it is not stretched -->
     <div style="max-width:420px;margin:20px auto 8px">
       <video controls playsinline preload="metadata"
-             poster="docs/video-poster.jpg"
+             poster="video-poster.jpg"
              style="width:100%;height:auto;display:block;border-radius:16px;
                     border:1px solid var(--line);background:#0d1117">
-        <source src="docs/plantmaster-demo.mp4" type="video/mp4">
+        <source src="plantmaster-demo.mp4" type="video/mp4">
         Your browser cannot play this video.
-        <a href="docs/plantmaster-demo.mp4">Download it instead</a>.
+        <a href="plantmaster-demo.mp4">Download it instead</a>.
       </video>
       <p style="text-align:center;color:var(--muted);font-size:13px;margin-top:10px">
         57 seconds &middot; real fault, real answer, real plant
@@ -105,7 +113,7 @@
 
     <div style="display:grid;gap:14px;margin:18px 0">
 
-      <a href="docs/PlantMaster-Pro-Overview.pdf" target="_blank" rel="noopener"
+      <a href="PlantMaster-Pro-Overview.pdf" target="_blank" rel="noopener"
          style="display:flex;gap:14px;align-items:flex-start;padding:18px;
                 border:1px solid var(--line);border-radius:var(--radius);
                 background:var(--surface);text-decoration:none">
@@ -120,7 +128,7 @@
         </span>
       </a>
 
-      <a href="docs/PlantMaster-Pro-Subscription-Agreement.pdf" target="_blank" rel="noopener"
+      <a href="PlantMaster-Pro-Subscription-Agreement.pdf" target="_blank" rel="noopener"
          style="display:flex;gap:14px;align-items:flex-start;padding:18px;
                 border:1px solid var(--line);border-radius:var(--radius);
                 background:var(--surface);text-decoration:none">
@@ -148,7 +156,7 @@
       Seven days free, no card. We load your equipment list and your manuals for you,
       at no charge. If it does not suit you, nothing happens when the trial ends.
     </p>
-    <p style="display:flex;gap:12px;flex-wrap:wrap;margin-top:16px">
+    <p class="res-cta" style="display:flex;gap:12px;flex-wrap:wrap;margin-top:16px">
       <a href="signup.html" class="btn btn-primary btn-lg">Start 7-day free trial</a>
       <a href="https://wa.me/923162364074" class="btn btn-wa btn-lg">Ask a question</a>
     </p>
