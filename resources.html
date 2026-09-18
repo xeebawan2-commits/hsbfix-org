@@ -61,8 +61,8 @@
   <div class="wrap">
     <span class="eyebrow">Resources</span>
     <h1>See it, read it, then decide</h1>
-    <p>A short introduction, a full walkthrough of the running software, the complete
-       product overview as a PDF, and the subscription agreement in plain language.
+    <p>Watch the software running on a real plant floor, read the full product
+       overview, and read the subscription agreement before you talk to anyone.
        Nothing here needs an account.</p>
   </div>
 </div>
@@ -70,46 +70,37 @@
 <section style="padding-top:40px">
   <div class="wrap legal">
 
-    <!-- ============ INTRODUCTION VIDEO ============ -->
-    <h2 id="intro">Introduction</h2>
+    <!-- ============ VIDEO ============ -->
+    <h2 id="video">Watch it running</h2>
     <p class="legal-intro">
-      A short overview of what PlantMaster Pro does and who it is built for.
+      Recorded on a live plant. An engineer types a real fault in plain language and the
+      AI answers from the plant&rsquo;s own uploaded equipment manuals.
     </p>
 
-    <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;
-                border-radius:var(--radius);border:1px solid var(--line);margin:18px 0 8px">
-      <iframe style="position:absolute;top:0;left:0;width:100%;height:100%;border:0"
-              src="https://www.youtube.com/embed/REPLACE_INTRO_ID"
-              title="PlantMaster Pro introduction"
-              loading="lazy" allowfullscreen
-              allow="accelerometer; clipboard-write; encrypted-media; picture-in-picture"></iframe>
-    </div>
-
-    <!-- ============ WALKTHROUGH VIDEO ============ -->
-    <h2 id="walkthrough">Full walkthrough</h2>
-    <p class="legal-intro">
-      The software running on a phone: raising a work order, scanning an asset,
-      asking the AI a fault question, and recording machine sound.
-    </p>
-
-    <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;
-                border-radius:var(--radius);border:1px solid var(--line);margin:18px 0 8px">
-      <iframe style="position:absolute;top:0;left:0;width:100%;height:100%;border:0"
-              src="https://www.youtube.com/embed/REPLACE_WALKTHROUGH_ID"
-              title="PlantMaster Pro walkthrough"
-              loading="lazy" allowfullscreen
-              allow="accelerometer; clipboard-write; encrypted-media; picture-in-picture"></iframe>
+    <!-- Portrait phone recording: keep it phone-width so it is not stretched -->
+    <div style="max-width:420px;margin:20px auto 8px">
+      <video controls playsinline preload="none"
+             poster="docs/video-poster.jpg"
+             style="width:100%;height:auto;display:block;border-radius:16px;
+                    border:1px solid var(--line);background:#0d1117">
+        <source src="VIDEO_URL_HERE" type="video/mp4">
+        Your browser cannot play this video.
+        <a href="VIDEO_URL_HERE">Download it instead</a>.
+      </video>
+      <p style="text-align:center;color:var(--muted);font-size:13px;margin-top:10px">
+        Problem Solver answering from the plant&rsquo;s own manuals
+      </p>
     </div>
 
     <p style="margin-top:22px">
       Prefer to click around yourself?
-      <a href="demo.html">Open the live demo</a> — no login required.
+      <a href="demo.html">Open the live demo</a> &mdash; no login required.
     </p>
 
     <!-- ============ DOWNLOADS ============ -->
     <h2 id="downloads">Documents</h2>
     <p class="legal-intro">
-      Both documents open in your browser. Nothing is emailed to you and no form is required.
+      Both open straight in your browser. No form, no email required.
     </p>
 
     <div style="display:grid;gap:14px;margin:18px 0">
@@ -120,9 +111,10 @@
                 background:var(--surface);text-decoration:none">
         <span style="font-size:26px;line-height:1">&#128196;</span>
         <span>
-          <b style="display:block;color:var(--ink);font-size:16px">Product overview (PDF)</b>
+          <b style="display:block;color:var(--ink);font-size:16px">Product overview &nbsp;<span
+             style="font-weight:500;color:var(--muted);font-size:13px">PDF &middot; 16 pages</span></b>
           <span style="color:var(--muted);font-size:14px">
-            Every module, what it does, and how a plant uses it day to day.
+            All 19 modules, what each one does, and how a plant uses it day to day.
             Written for an engineering manager, not a developer.
           </span>
         </span>
@@ -134,10 +126,11 @@
                 background:var(--surface);text-decoration:none">
         <span style="font-size:26px;line-height:1">&#128203;</span>
         <span>
-          <b style="display:block;color:var(--ink);font-size:16px">Subscription agreement (PDF)</b>
+          <b style="display:block;color:var(--ink);font-size:16px">Subscription agreement &nbsp;<span
+             style="font-weight:500;color:var(--muted);font-size:13px">PDF &middot; 3 pages</span></b>
           <span style="color:var(--muted);font-size:14px">
-            The contract covering fees, term, data ownership and cancellation.
-            Read it before you commit — there is nothing hidden in it.
+            Fees, term, data ownership, liability and cancellation. This is the document
+            you sign &mdash; published in full so you can read it before you commit.
           </span>
         </span>
       </a>
@@ -145,16 +138,15 @@
     </div>
 
     <p style="color:var(--muted);font-size:14px">
-      The agreement above is the document you sign. The
-      <a href="terms.html">Terms of Service</a> and
+      The <a href="terms.html">Terms of Service</a> and
       <a href="privacy.html">Privacy Policy</a> apply to everyone using the site and software.
     </p>
 
     <!-- ============ CTA ============ -->
     <h2 id="next">Next step</h2>
     <p>
-      Seven days free. We load your equipment list and your manuals for you, at no charge.
-      If it does not suit you, nothing happens when the trial ends.
+      Seven days free, no card. We load your equipment list and your manuals for you,
+      at no charge. If it does not suit you, nothing happens when the trial ends.
     </p>
     <p style="display:flex;gap:12px;flex-wrap:wrap;margin-top:16px">
       <a href="signup.html" class="btn btn-primary btn-lg">Start 7-day free trial</a>

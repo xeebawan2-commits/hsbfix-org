@@ -221,6 +221,13 @@
             <a href="#" class="btn btn-wa" id="waLink">💬 Message us now</a>
             <a href="index.html" class="btn btn-ghost">Back to home</a>
           </div>
+          <p id="saveWarn" style="display:none;margin-top:18px;padding:13px 15px;text-align:left;
+             border:1px solid #D97706;border-radius:10px;background:rgba(217,119,6,.08);
+             color:var(--text);font-size:14px">
+            <b>Please send the WhatsApp message above.</b><br>
+            We could not file your details automatically just now, so messaging us
+            is the fastest way to make sure your trial is set up today.
+          </p>
         </div>
       </div>
 
@@ -346,9 +353,18 @@ document.getElementById('signupForm').addEventListener('submit',function(e){
         message:(f.role.value?'Role: '+f.role.value+'. ':'')
                 +(f.plants.value?'Plants: '+f.plants.value+'. ':'')
                 +(f.notes.value.trim()||''),
+        status:'new',
         source:'website'
       })
     }).then(function(res){
+      if(!res||!res.ok){
+        /* The enquiry did NOT save. Tell the visitor the truth and push
+           them to WhatsApp so the lead is not silently lost. */
+        try{
+          var w=document.getElementById('saveWarn');
+          if(w)w.style.display='block';
+        }catch(e){}
+      }
       /* Ask the server to send the acknowledgement email.
          Fire-and-forget: the enquiry is already saved, so an email
          failure must never change what the visitor sees. */
@@ -356,7 +372,7 @@ document.getElementById('signupForm').addEventListener('submit',function(e){
       return fetch('https://dpmmenwziplixrgylapy.supabase.co/functions/v1/signup-notify',{
         method:'POST',
         headers:{'Content-Type':'application/json'},
-        body:JSON.stringify({email:email})
+        body:JSON.stringify({email:email,request_id:null})
       }).catch(function(){});
     }).catch(function(){});
   }catch(err){}
